@@ -15,7 +15,7 @@ Then, in order to startup the network, we need to make a POST request to the fol
 /api/v1/startup
 ```
 
-Once the network is up, if we want to setup an ESC, we need to make a POST request with the ESC data as body to the following endpoint:
+Once the network is up, if we want to setup an ESC, we need to make a POST request with two attributes in the body ("*agreement*": SLA data, "*metricQueries*": Queries to collect the SLA metrics) to the following endpoint:
 ```
 /api/v1/setUp/XXX
 ```
