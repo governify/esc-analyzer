@@ -3,7 +3,7 @@
 Please read the [Setup Guide](setup.md) first and install all necessary components first.
 
 
-We assume all ESC are properly configured inside the ```./esc``` folder. By default the repo has a pre-configured showcase scenario with three different ESC that develop analytics over a street flow and identify the appropriate parameters for an intersection stoplight policy.
+We assume all ESC are properly configured inside the ```./esc``` folder.
 
 Once all the parameters have been configured for each of the ESC, we need to execute the following command in the root of the repository:
 ```
