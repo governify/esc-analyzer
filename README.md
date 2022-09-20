@@ -4,9 +4,8 @@ This framework supports the development/operation of Elastic Smart Contracts in 
 
 The following documentation is available:
 
-- [Setup Guide](./docs/setup.md). How to install the framework and the blockchain configuration.
-- [Usage Guide](./docs/usage.md). How to operate the framework.
-- [ESC Config Guide](./docs/esc-config.md). How to configure an ESC.
+- [Setup Guide](./docs/setup.md). How to install the infrastructure.
+- [Usage Guide](./docs/usage.md). How to operate the infrastructure.
 
 ### Running the server
 To run the server, run:
