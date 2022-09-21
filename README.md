@@ -1,6 +1,6 @@
-# Elastic Smart Contract Framework
+# Elastic Smart Contract SLA Infrastructure
 
-This framework supports the development/operation of Elastic Smart Contracts in the Hyperledger Fabric Blockchain.
+This infrastructure supports the development/operation of Elastic Smart Contracts in the Hyperledger Fabric Blockchain.
 
 The following documentation is available:
 
