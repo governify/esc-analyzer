@@ -11,5 +11,5 @@ This guide has been developed in Ubuntu 18.04. It is recommended to update the s
 5. Run the following command in the root directory to install the dependencies of this repository:
 
 ```
-npm i express governify-commons oas-tools
+npm i express governify-commons oas-tools@2.1.4
 ```
