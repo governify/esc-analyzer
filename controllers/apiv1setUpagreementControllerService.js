@@ -36,8 +36,9 @@ module.exports.setUpAgreement = async function setUpAgreement(req, res, next) {
   const metricQueries = dt.metricQueries;
 
   const agreementName = file.replace(/[\d\.]+$/, '');
+  let escPath = path.join(__dirname, "../esc",file);
   // Create the new agreement based on the agreement template
-  fse.copy(path.join(__dirname, `../esc-template/${agreementName}X`), path.join(__dirname, "../esc", file), function (err) {
+  fse.copy(path.join(__dirname, `../esc-template`), escPath, function (err) {
     if (err) {
       console.error(err);
       sendRes(res, 500, errorMessage);
@@ -45,7 +46,6 @@ module.exports.setUpAgreement = async function setUpAgreement(req, res, next) {
     }
 
     // Path files
-    let escPath = path.join(__dirname, "../esc", file);
     let escIndexPath = path.join(escPath, "index.js");
     let chaincodePath = path.join(escPath, "chaincode/src");
     let chaincodeIndexPath = path.join(chaincodePath, "index.js");
