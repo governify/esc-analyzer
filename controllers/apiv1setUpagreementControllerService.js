@@ -46,11 +46,12 @@ module.exports.setUpAgreement = async function setUpAgreement(req, res, next) {
     }
 
     // Path files
+    let configPath = path.join(escPath, "config.json");
     let escIndexPath = path.join(escPath, "index.js");
     let chaincodePath = path.join(escPath, "chaincode/src");
     let chaincodeIndexPath = path.join(chaincodePath, "index.js");
 
-    fs.readFile(escIndexPath, 'utf8', function (err, dataIndexESC) {
+    fs.readFile(configPath, 'utf8', function (err, dataIndexESC) {
       if (err) {
         console.log(err);
         sendRes(res, 500, errorMessage);
@@ -71,7 +72,7 @@ module.exports.setUpAgreement = async function setUpAgreement(req, res, next) {
         replace(regAux, file);
 
       // Update ESC index file with the new agreement data
-      fs.writeFile(escIndexPath, resultESC, 'utf8', function (err) {
+      fs.writeFile(configPath, resultESC, 'utf8', function (err) {
         if (err) {
           console.log(err);
           sendRes(res, 500, errorMessage);
