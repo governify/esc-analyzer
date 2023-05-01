@@ -54,6 +54,16 @@ return new Promise((resolve, reject) => {
         name: oasDoc.info.title
         });
     });
+    app.post('/down', function (req, res) {
+        let data = req.body;
+        if (data.down === true) {
+            undeploy();
+        } else {
+            res.status(400).send({
+                message: 'Send down = true in order to undeploy'
+            });
+        }
+    });
     } catch (err) {
     reject(err);
     }
